@@ -34,7 +34,7 @@ Make sure you have prepared the following:
     1. mtd-utils(Ubuntu), e2fsprogs(Fedora)
     2. squashfs-tools
   - Do not run two processes of dnf in one directory at the same time, as some temp files may be covered.
-
+	
 #### (1) toolchain
 &emsp;&emsp;Before using dnf tui plugin, you should bitbake the cross-development toolchain by Yocto.
 
@@ -407,6 +407,14 @@ file system or Reference2 to install systemd based root file system.
                   │                                          │
                   └──────────────────────────────────────────┘
 ```
+##### (7). Notice   
+If conflicts of packages occur, you can choose one of them to fix it.
+
+The examples of conflict packages are as follows.
+- syslog-ng and busybox-syslog
+- watchdog-keepalive and watchdog
+- wireless-regdb and wireless-regdb-static. 
+
 #### 3.1.3.2 Remove
 &emsp;&emsp;You can choose the package that you want to remove after entering "Remove" in main interface.
 ```
